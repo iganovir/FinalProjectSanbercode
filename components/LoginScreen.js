@@ -6,41 +6,41 @@ import {
 
 
 export default class App extends Component {
-    render(){
-    return (
-        <KeyboardAvoidingView
-            behavior={Platform.OS == "ios" ? "padding" : "height"}
-            style={styles.container}>
-            <ScrollView>
-                <View style={styles.containerView}>
-                    <Image source={require('../assets/images/img_login.png')} style={styles.imgLogin} />
-                    <Text style={styles.welcomeText}>Welcome!</Text>
-                    <Text style={styles.welcomeText2}>Sign in with your email and password</Text>
-                    <View style={styles.containerForm}>
-                        <View style={styles.forminput}>
-                            <Text style={styles.formtext}>Email</Text>
-                            <TextInput style={styles.input} />
-                        </View>
-                        <View style={styles.forminput}>
-                            <Text style={styles.formtext}>Password</Text>
-                            <TextInput style={styles.input} secureTextEntry={true} />
-                        </View>
-                        <View style={styles.kotaklogin}>
-                            <TouchableOpacity style={styles.btlogin} onPress={() => this.props.navigation.navigate('App',
-                                {
-                                    screen: 'Home', params:
-                                        { screen: 'Skill', params: { test: 'Mukhlis' } }
-                                })}>
-                                <Text style={styles.textbt}>  Sign In </Text>
-                            </TouchableOpacity>
+    render() {
+        return (
+            <KeyboardAvoidingView
+                behavior={Platform.OS == "ios" ? "padding" : "height"}
+                style={styles.container}>
+                <ScrollView>
+                    <View style={styles.containerView}>
+                        <Image source={require('../assets/images/img_login.png')} style={styles.imgLogin} />
+                        <Text style={styles.welcomeText}>Welcome!</Text>
+                        <Text style={styles.welcomeText2}>Sign in with your email and password</Text>
+                        <View style={styles.containerForm}>
+                            <View style={styles.forminput}>
+                                <Text style={styles.formtext}>Email</Text>
+                                <TextInput style={styles.input} />
+                            </View>
+                            <View style={styles.forminput}>
+                                <Text style={styles.formtext}>Password</Text>
+                                <TextInput style={styles.input} secureTextEntry={true} />
+                            </View>
+                            <View style={styles.kotaklogin}>
+                                <TouchableOpacity style={styles.btlogin} onPress={() => this.props.navigation.navigate('App',
+                                    {
+                                        screen: 'Home', params:
+                                            { screen: 'Skill', params: { test: 'Mukhlis' } }
+                                    })}>
+                                    <Text style={styles.textbt}>  Sign In </Text>
+                                </TouchableOpacity>
+                            </View>
                         </View>
                     </View>
-                </View>
-            </ScrollView>
-        </KeyboardAvoidingView>
+                </ScrollView>
+            </KeyboardAvoidingView>
 
-    );
-                            }
+        );
+    }
 }
 
 const styles = StyleSheet.create({
@@ -78,7 +78,6 @@ const styles = StyleSheet.create({
         fontFamily: 'regular'
     },
     imgLogin: {
-        alignContent: 'flex-end'
     },
     formtext: {
         color: '#4D4D4D',

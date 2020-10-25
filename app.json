@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "FinalProject",
+    "name": "FinalProject-Iga",
     "slug": "FinalProject",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,10 +17,15 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.iganovir.FinalProject"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "description": "",
+    "android": {
+      "package": "com.iganovir.FinalProject"
     }
   }
 }
